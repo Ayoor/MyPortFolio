@@ -1,0 +1,163 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: white;
+   
+    height: 6%;
+}
+.nav-item{
+    padding-left: 10px;
+}
+.hello{
+    width: 100%;
+    height: 100vh;
+  box-sizing: border-box;
+
+    
+}
+
+
+
+.box-container{
+    width: 100%;
+   
+    height: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+}
+.subcontainer{
+    height: 94%;
+    width: 100%;
+    display: flex;
+    
+}
+.half1{
+    height: 100%;
+    width: 50%;
+    background-color: #FF5851;
+    margin: 0;
+    padding: 0;
+}
+
+.half2{
+    height: 100%;
+    width: 50%;
+    background-color: #ffff;
+    border-top: 1px solid grey;
+}
+.square{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    /* border: 5px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+box-shadow: 0px 20px 35px rgba(0,0,0,0.3 );
+
+
+    
+}
+
+
+span{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background:purple;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50.1%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+span:nth-child(1){
+    transform: rotate(0deg);
+    
+}
+span:nth-child(2){
+    transform: rotate(90deg);
+}
+span:nth-child(3){
+    transform: rotate(180deg);
+}
+span:nth-child(4){
+    transform: rotate(270deg);
+}
+
+
+
+
+
+h1{
+    font-size: 6rem;
+    
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
+#he-div,#llo-div{
+    letter-spacing: 12px;
+   
+    color: #0B0E47;
+    font-weight: bold;
+}
+
+
+
+.sidecontacts{
+    padding:100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid purple; */
+    height: 170px;
+    width: 30px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    position: fixed;    
+    top: 50%;
+    right:0px;
+transform: translateY(-50%);
+z-index: 20;
+   box-shadow: -5px 5px 10px #dbdbdb,
+   5px -5px 10px #ffffff;
+}
+.sidecontacts a{
+    color: #0B0E47;
+    margin-top: 7px;
+    
+}
+
