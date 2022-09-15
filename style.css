@@ -5,12 +5,14 @@ body{
 }
 .navbar{
     background-color: white;
-   
+   z-index: 30;
     height: 6%;
+    padding: 10px;
 }
 .nav-item{
     padding-left: 10px;
 }
+
 .hello{
     width: 100%;
     height: 100vh;
@@ -30,11 +32,13 @@ body{
     align-items: center;
     position: absolute;
     
+    
 }
 .subcontainer{
     height: 94%;
     width: 100%;
     display: flex;
+   
     
 }
 .half1{
@@ -68,14 +72,14 @@ box-shadow: 0px 20px 35px rgba(0,0,0,0.3 );
 }
 
 
-span{
+.square span{
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     display: block;
 }
-span::before{
+.square span::before{
     content: '';
     position: absolute;
     left: 0;
@@ -103,17 +107,17 @@ span::before{
         transform-origin: right;
     }
 }
-span:nth-child(1){
+.square span:nth-child(1){
     transform: rotate(0deg);
     
 }
-span:nth-child(2){
+.square span:nth-child(2){
     transform: rotate(90deg);
 }
 span:nth-child(3){
     transform: rotate(180deg);
 }
-span:nth-child(4){
+.square span:nth-child(4){
     transform: rotate(270deg);
 }
 
@@ -121,7 +125,7 @@ span:nth-child(4){
 
 
 
-h1{
+#he-div h1, #llo-div h1{
     font-size: 6rem;
     
     -ms-word-break: break-all;
@@ -160,4 +164,47 @@ z-index: 20;
     margin-top: 7px;
     
 }
+
+.title-overline{
+border-bottom: 2px solid  #0B0E47;;
+margin-bottom: 20px;
+width: 80px;
+}
+.title-div{
+    margin-top: 70px;
+}
+.title-div h4{
+    color: #0B0E47;
+}
+
+#hi{
+    margin-top: 50px;
+}
+.about-wrapper a{
+    text-decoration: none;
+    
+}
+.pic-wrapper{
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    margin-bottom: 70px;
+}
+.pic-wrapper img{
+    width: 60%;
+   object-fit: cover;
+   object-position: center;
+   border-bottom-right-radius:50% ;
+   border-bottom-left-radius:30% ;
+}
+
+@media screen and (max-width: 800px) {
+    .subcontainer{
+        margin-top: 20px;
+    }
+}
+
+
 
