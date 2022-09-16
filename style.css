@@ -188,8 +188,9 @@ width: 80px;
     /* border: 1px solid green; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     height: 500px;
+    /* border: 1px solid green; */
     margin-bottom: 70px;
 }
 .pic-wrapper img{
@@ -200,11 +201,148 @@ width: 80px;
    border-bottom-left-radius:30% ;
 }
 
-@media screen and (max-width: 800px) {
-    .subcontainer{
+
+.progress{
+    width: 95%;
+    background-color: #76769e;
+    height: 10px;
+}
+
+.ratingscontainer{
+   margin-bottom: 15px;
+}
+
+#html{
+    width: 95% ;
+}
+#css{
+    width:85% ;
+}
+#javascript{
+    width: 80%;
+}
+#bootstrap{
+    width: 85% ;
+}
+
+#sql{
+    width: 80%;
+}
+#wordpress{
+    width: 85%;
+}
+#git{
+    width: 80%;
+}
+#github{
+    width:80% ;
+}
+#android{
+    width: 80%;
+}
+#jquery{
+    width: 85% ;
+}
+#java{
+    width: 85% ;
+}
+.progress-bar{
+    background-color: #FF5851;
+  
+}
+.progress-bar-animation{
+   
+    animation: progressanimation 5s;
+}
+@keyframes progressanimation {
+    0%{
+        width: 0;
+    }
+}
+.skillssection, .projectssection,.contactsection{
+    margin-bottom: 70px;
+}
+.projectssection .row{
+    margin-top: 30px;
+   
+}
+@media (max-width:800px) {
+    .sidecontacts{
+        visibility: hidden;
+    }
+    
+    .contactsection .col-md-5{
+    min-height: 300px;
+   display: block;
+   position: relative;
+   top: -70px;
+    
+    }
+    #wrap{
+        display: flex;
+        flex-direction: column;
         margin-top: 20px;
+        /* border: 1px solid black; */
+        width: 100%;
+    
     }
 }
 
+.contactsection .col-md-5{
+   /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+   
+}
+
+.contactsection .col-md-7{
+   
+    background-color: #0B0E47;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#wrapper{
+    /* border: 1px solid red; */
+    height: 50%;
+    width: 80%;
+}
+
+#wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+    width: 100%;
+
+}
+#wrap .text-muted{
+    font-size: 80%;
+}
+
+.inputfield{
+    border-top: none ;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    caret-color:white ;
+    background-color:#0B0E47;
+    color:white;
+}
+
+.inputfield:focus{
+    background-color: #0B0E47;
+    box-shadow: none;
+    color: white;
+}
+.inputfield::placeholder{
+    color: white;
+}
+
+.socialicon{
+    position: relative;
+    top: 7px;
+    padding-right: 10px;
+}
 
 
