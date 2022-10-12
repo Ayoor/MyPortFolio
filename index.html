@@ -32,13 +32,16 @@
        
        <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">AYOOR</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          <a class="navbar-brand" href="#">AYOOOR</a>
+          <button class="navbar-toggler d-flex collapsed
+          d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
           </button>
-         
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
             
             <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0">
             <li class="nav-item">
@@ -271,7 +274,35 @@
 </div>
 </section>
 
-<section class="contactsection" id="contacts">
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Message Sent!</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div><img src="Images/verified.gif" style="width: 30px;
+             margin-right: 10px;">Thank you for reaching out to me. 
+              I'll respond to you as soon as i receive your mail.</div>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>  
+ 
+   <section class="contactsection" id="contacts">
     <div class="title-div">
         <div class="title-overline"></div>
         <h4 class="title">CONTACT ME</h4>
@@ -282,7 +313,7 @@
            <h5 style="color: #FF5851; margin-top: 20px;">How to get in touch with me?</h5>
            <h5 style="color: #0B0E47; font-size: 98%; margin-top: 20px;" >Send Me a Mail!</h5>
             
-           <div id="wrap">
+           <div id="wrap" class="container">
                 <div >
                     <p> <span class="text-muted">My Email</span>  <br>
                 <span style="font-size: 90%; color: #0B0E47;">GBENGAJOHN4GOD@GMAIL.COM</span> </p>
@@ -304,39 +335,60 @@
         </div>
     </div>
     
+  
     
     <div class="col-md-7">
-        <form action="https://formsubmit.co/b5fbd22d4cf30d4552ba777619bb060b" method="POST">
+        <form action="https://formsubmit.co/b5fbd22d4cf30d4552ba777619bb060b " method="POST" id="contactform">
 
             <!-- honeypot -->
             <input type="text" name="_honey" style="display: none;">
 
             <!-- disable captcha -->
             <input type="hidden" name="_captcha" value="false">
+
+            <!-- prevent formsubmit page. -->
+            <input type="hidden" name="_next" value="http://www.ayodele.me">
             
             <div class="mb-3">
                 <input type="text" id="name" name="Name" class="form-control inputfield"
                  placeholder="Enter your Name" >
+
+                 <span id="name-error" class="errormessage"></span>
+
               </div>
              
               <div class="mb-3">
                 <input type="email" id="email" name="Email" class="form-control inputfield"
                  placeholder="Enter your Email Address">
+
+                 <span id="email-error" class="errormessage"></span>
+
               </div>
 
               <div class="mb-3">
                 <input type="tel" name="Phone" id="phone" class="form-control inputfield"
                  placeholder="Enter your Phone Number (Optional)">
+
+                 <span id="tel-error" class="errormessage"></span>
+                  
+
               </div>
               
               <div class="mb-3">
                 <input type="text" name="Subject" class="form-control inputfield"
                 placeholder="Subject" id="subject" >
+
+                <span id="subject-error" class="errormessage"></span>
+                
               </div>
               
               <div class="mb-3">
                 <textarea class="form-control" name="Message&nbsp;Body" id="messagetext" rows="8" 
                 placeholder="Compose your Message" ></textarea>
+
+                
+                <span id="msg-error" class="errormessage"></span>
+                  
               </div>
         
         <div id="sendwrap">
@@ -368,6 +420,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
   
 <script>
+// alert ($(window).width());
+
     $(window).scroll(function(){
   // This is function used to detect if the element is scrolled into view
   function elementScrolled(elem)
@@ -403,11 +457,7 @@ $(".progress-bar").addClass("progress-bar-animation")
 
 
 
-//prevents form from submitting
-$(document).on("submit", "form", function(e){
-    e.preventDefault();
-    return  false;
-})
+
 
 function checkEmptyField(){
 
@@ -416,31 +466,38 @@ errormessage="";
   
 
 if($("#name").val()== ""){
-    errormessage+= "Please Enter a name\n"
+   
+    $("#name-error").html("Please Enter a name")
     $("#name").css("border-bottom-color", "red")
+    errormessage="Empty field";
 }   
 
 if($("#email").val()== ""){
-    errormessage+= "Please enter your Email Address\n"
+    
+    $("#email-error").html("Please Enter an Email Address")
 $("#email").css("border-bottom-color", "red")
+errormessage="Empty field";
 }   
 
 if($("#subject").val()== ""){
-    errormessage+= "Please enter a Subject Matter\n"
+    
+    $("#subject-error").html("Please enter a Subject Matter")
     $("#subject").css("border-bottom-color", "red")
+    errormessage="Empty field";
 }   
 
 
 if($("#messagetext").val()== ""){
-    errormessage+= "Please enter your Message\n"
+    $("#msg-error").html("Please enter your Message")
     $("#messagetext").css("border", "1px solid red")
+    errormessage="Empty field";
 }   
 
   
 }
 
 function clearall(){
-  errormessage+= ""
+  errormessage= ""
     $("#name").css("border-bottom-color", "white")
     $("#email").css("border-bottom-color", "white")
     $("#phone").css("border-bottom-color", "white")
@@ -464,34 +521,69 @@ function isEmail(email) {
 
 function verifyfield(){
 if(isEmail($("#email").val())==false&&$("#email").val()!="" ){
-  errormessage += "The Email Provided is Invalid \n";
+  $("#email-error").html("Please Enter a Valid Email Address")
   $("#email").css("border-bottom-color", "red")
+  errormessage="Error";
 }
 if($.isNumeric($("#phone").val())==false&&$("#phone").val()!=""){
- errormessage += "Invalid Telephone Number";
+ $("#tel-error").html("Enter a Valid Telephone Number")
  $("#phone").css("border-bottom-color", "red")
+ errormessage="Error";
 }
 
 }
 
-$("#sendbutton").click(function(){
+
+// clear error messages as user types in field
+$('#name').on('input', function() {
+  $("#name").css("border-bottom-color", "white")
+  $("#name-error").html("")
+});
+
+$('#email').on('input', function() {
+  $("#email").css("border-bottom-color", "white")
+  $("#email-error").html("")
+});
+
+$('#phone').on('input', function() {
+  $("#phone").css("border-bottom-color", "white")
+  $("#tel-error").html("")
+});
+
+$('#subject').on('input', function() {
+  $("#subject").css("border-bottom-color", "white")
+  $("#subject-error").html("")
+});
+
+$('#messagetext').on('input', function() {
+  $("#messagetext").css("border", "none")
+  $("#msg-error").html("")
+});
+
+function reset(){
+clearall();
+$("#name").val("");
+$("#email").val("");
+$("#phone").val("");
+$("#subject").val("");
+$("#messagetext").val("");
+
+}
+
+//submit 
+
+
+
+$('#contactform').submit(function() {
 clearall();
 checkEmptyField();
 verifyfield();
-if(errormessage==""){
-errormessage +="NO Errors"
-
-
-
-// }
-}
-
-
-
-alert(errormessage);
-errormessage=""
-
-
+  if (errormessage!="") {
+   
+    return false;
+  }
+  $('#myModal').modal('toggle');
+  reset()
 });
 
 
