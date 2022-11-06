@@ -1,3 +1,18 @@
+@font-face {
+    font-family: watergalon;
+    src: url(Water\ Galon.ttf);
+    
+}
+@font-face {
+    font-family: bodyfont;
+    src: url(KIN668.TTF);
+    
+}
+
+p{
+    font-family: bodyfont;
+}
+
 body{
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +26,10 @@ body{
 }
 .nav-item{
     padding-left: 10px;
+}
+
+.nav-link{color: #0B0E47;
+font-weight: bold;
 }
 
 .hello{
@@ -50,7 +69,10 @@ body{
     transform: rotate(0deg);
     transition: .25s ease-in-out;
 }
-
+.navbar-brand{
+    font-family: watergalon;
+    color: #0B0E47;
+}
 .middle-bar{
 
     margin-top: 0px;
@@ -238,6 +260,7 @@ width: 80px;
 }
 .title-div h4{
     color: #0B0E47;
+    font-family: watergalon;
 }
 
 #hi{
@@ -455,7 +478,7 @@ width: 80px;
     justify-content: end;
 }
 /* From uiverse.io by @adamgiebl */
-button {
+#sendbutton {
     font-family: inherit;
     font-size: 0.75em;
     background: #FF5851;
@@ -470,31 +493,31 @@ button {
     transition: all 0.2s;
    }
    
-   button span {
+   #sendbutton span {
     display: block;
     margin-left: 0.3em;
     transition: all 0.3s ease-in-out;
    }
    
-   button svg {
+   #sendbutton svg {
     display: block;
     transform-origin: center center;
     transition: transform 0.3s ease-in-out;
    }
    
-   button:hover .svg-wrapper {
+   #sendbutton:hover .svg-wrapper {
     animation: fly-1 0.6s ease-in-out infinite alternate;
    }
    
-   button:hover svg {
+   #sendbutton:hover svg {
     transform: translateX(1.2em) rotate(45deg) scale(1.1);
    }
    
-   button:hover span {
+   #sendbutton:hover span {
     transform: translateX(5em);
    }
    
-   button:active {
+   #sendbutton:active {
     transform: scale(0.95);
    }
    
