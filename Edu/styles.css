@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4, 9, 30, 0.5)), url("Images/banner.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.navbar-brand{
+    margin-left: 100px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}  
+    
+
+/* logo */
+nav img{
+    width: 200px;
+}
+
+/* hover effect */
+.nav-link::after{
+    content: "";
+    width: 0%;
+    height:2px;
+    display: block;
+    margin: auto;
+    background-color: #b62e2e;
+    transition: 0.5s;
+}
+.nav-link:hover::after{
+    width: 100%;
+    color: white;
+}
+/* hover effect end */
+
+.jumbotron{
+    
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    margin-top: 100px;
+    
+}
+
+#welcometext{
+    margin-bottom: 40px
+}
+ .text-area h1{
+    font-size: 270%;
+}
+.actionbutton{
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+
+}
+.actionbutton:hover{
+    transition: 0.7s;
+    text-decoration: none;
+    color: white;
+    background-color: #b62e2e;
+    border: 1px solid #b62e2e;
+
+}
+/* courses */
+.coursessection,.reviewsection{
+    background-color: white;
+    margin-top: 80px;
+}
+#coursetitlediv, #facilitiestitlediv, #campustitlediv,#reviewtitlediv{
+   
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.couresecard{
+    background-color: #FFF3F3; 
+    padding: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.couresecard:hover{
+    border-radius: 20px;
+    background: #FFF3F3;
+    box-shadow:  -6px 6px 12px #ded3d3,
+                 6px -6px 12px #ffffff;
+                }
+
+.coursesdiv,.facilitiesdiv,.reviewdiv{
+    margin-top: 30px;
+   
+}
+
+/* campus section */
+#campusessection{
+    background-color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.campus-card{
+    background-color: #FFF3F3; 
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 400px;
+} 
+
+#londoncarddiv, #newyorkcarddiv, #newyorkcarddiv{
+    background-position: center;
+    border: none; 
+}
+
+#londoncarddiv{
+    background-image: url("Images/london.png");
+     
+}
+
+#londoncarddiv:hover{
+   
+    background-image: linear-gradient(rgba(223, 65, 162, 0.5),rgba(60, 243, 75, 0.226)), url("Images/london.png");
+ }
+ 
+ #newyorkcarddiv{
+    background-image: url("Images/newyork.png");
+    }
+
+ #newyorkcarddiv:hover {
+    background-image: linear-gradient(rgba(223, 65, 162, 0.5),rgba(196, 228, 121, 0.5)), url("Images/newyork.png");
+ }
+
+ #washingtoncarddiv{
+    background-image: url("Images/washington.png");
+   }
+   
+ #washingtoncarddiv:hover{
+    background-image: linear-gradient(rgba(87, 78, 170, 0.5),rgba(243, 60, 60, 0.5)), url("Images/washington.png");
+ }
+
+
+.londontext,.washingtontext,.newyorktext{
+        
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: 1s  ease;
+        overflow: hidden;
+        height: 0;
+        color: white
+}
+#londoncarddiv:hover .londontext, #newyorkcarddiv:hover .newyorktext, #washingtoncarddiv:hover .washingtontext{
+    
+    height: 60%;
+}
+
+.titlenote{
+    color: gray;
+}
+
+/* facilities section */
+
+.facilities{
+    margin-top: 60px;
+}
+
+.librarycard{
+    background-image: url("Images/library.png");
+   
+}
+.foodcard, .playgroundcard, .librarycard{
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.foodcard{
+    background-image: url("Images/cafeteria.png");
+    
+}
+
+.playgroundcard{
+    background-image: url("Images/basketball.png");
+   
+}
+
+.facilitytext{
+    margin-top: 10px;
+    color: gray;
+}
+.facilitytitle{
+    margin-top: 20px;
+    font-weight: bold;
+}
+/* review section */
+
+.userimage{
+    width: 70px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 20px;
+}
+.reviewtextwrapper{
+    margin: 5px 20px;
+}
+.reviewcard{
+    background-color: #FFF3F3; 
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+ .reviewcard:hover{
+    border-radius: 20px;
+    background: #FFF3F3;
+    box-shadow:  -6px 6px 12px #ded3d3,
+                 6px -6px 12px #ffffff;
+}
+.checked{
+    color: orange;
+}
+
+/* About */
+
+.aboutdiv{
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(19, 26, 90, 0.7),rgba(19, 26, 90, 0.7)),url("Images/banner2.jpg");
+    border: none;
+    
+    background-size: cover;
+
+}
+.abt{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* From uiverse.io */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #f13942;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+.buttonwrapper{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonwrapper h6{
+    color: white;
+    font-weight: bold;
+}
+
+footer{
+    margin-top: 150px;
+    width: 100%;
+    padding-bottom: 30px;
+}
+footer p{ 
+    font-size: 90%;
+}
+.footertextwrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+.socials{
+    width: 30px;
+    margin-left: 20px
+}
+.socialsdiv{
+    margin: 0 auto;
+    text-align: center;
+}

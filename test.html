@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ 
+     <!-- font-awesome -->
+ <script src="https://kit.fontawesome.com/8ea43b1ea3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    /* rotating border
+    .square::before{
+    
+position: absolute;
+width: 150%;
+height: 150%;
+background: conic-gradient(from 90deg, rgb(0 0 0/ 0%) 70%, rgb(11 78 230 / 9%)80%, rgb(0 220 255)100%);
+content: '';
+left: -25%;
+top: -25%;
+animation: rotate 2s infinite linear;
+}
+.square:after{
+position: absolute;
+width: 94%;
+height: 94%;
+background-color: #020223;
+content: '';
+top: 3%;
+left: 3%;
+
+}
+@keyframes rotate {
+100%{
+    transform: rotate(360deg);
+}
+
+}
+.square{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+   bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #020223;
+    overflow: hidden;
+    box-shadow: 0px 20px 35px rgba(0,0,0,0.3 );
+} */
+/* rotating border 2 
+ span{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 57, 214);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50.1%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+span:nth-child(1){
+    transform: rotate(0deg);
+}
+span:nth-child(2){
+    transform: rotate(90deg);
+}
+span:nth-child(3){
+    transform: rotate(180deg);
+}
+span:nth-child(4){
+    transform: rotate(270deg);
+}
+.square{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+   bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: orangered;
+} */
+/* fixed side menu
+
+.sidecontacts{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid purple;
+    height: 100px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    top: 50%;
+    right:2px;
+transform: translateY(-50%);
+}
+.socialicon{
+    margin-top: 5px;
+} */
+/* .progress-bar{
+    animation: animationn 1s;
+    height: 4px;
+}
+.progress{
+    height: 4px;
+    
+}
+
+
+@keyframes animationn {
+    0%{
+        width: 0;
+    }
+}
+.prog{
+    
+    width: 50%;
+} */
+
+.containerr{
+    
+    display: flex;
+}
+.containerr label{
+    margin-right: 5px;
+}
+.progress{
+    width: 95%;
+    
+    position: relative;
+    top: 5px;
+}
+.progress-bar{
+    animation: animatebar 1s;
+}
+
+@keyframes animatebar {
+    0%{
+        width: 0;
+    }
+}
+
+</style>
+<body>
+  
+ <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ayoor</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+          </button>
+         
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contact</a>
+              </li>
+            
+          </ul>
+          </div>
+          
+        </div>
+      </nav>
+      
+      
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    <!-- fixed side menu 
+         <div class="container-fluid">
+        <div class="sidecontacts">
+            <a href="" class="socialicon"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="" class="socialicon"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="" class="socialicon"> <i class="fa-brands fa-instagram "></i></a>
+            <a href="" class="socialicon"> <i class="fa-brands fa-linkedin"></i></a>
+        
+           </div> -->
+    <!-- rotating border 2
+    <section class="square">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+    </section> -->
+    
+         
+<script>
+  const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+</script>
+      
+</body>
+</html>
