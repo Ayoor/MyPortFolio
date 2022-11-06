@@ -1,0 +1,18 @@
+cLI--- cOMMAND line Interface eg cmd
+cd---change directory
+repository--- whre your project is kept.
+github-- a website that hosts repositories
+git--- tool for saving different versions of a project
+
+
+clones- duplicate files from cloud to computer
+add-- 
+
+git add . 
+git commit -m "commit message"
+git branch branchname 		-- creates new branch
+git checkout branchname		--- to switches the new branch
+git push -u origin branchname
+
+git push -f origin "branchname" -- force a push
+git remote add origin https://github.com/Ayoor/Ayoor.github.io.git

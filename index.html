@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
  
     <link rel="stylesheet" href="style.css">
+    <!-- fade effect style -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +56,7 @@
                 <a class="nav-link" href="#skills">Skills</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects">Works</a>
+                <a class="nav-link" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contacts">Contact</a>
@@ -104,7 +106,11 @@
                                      secure and user friendly! <a href="https://wa.me/2347084951666?text=" target="_blank">Contact me</a> 
                                      (Whatsapp) for your web Development gig Today at a very rewarding price.</p>
             </div>
-            <div class="col-md-7 pic-wrapper">
+            <div class="col-md-7 pic-wrapper" data-aos="fade-up"
+                                              data-aos-duration="800"
+                                              data-aos-mirror="true"
+                                              data-aos-once="false"
+                                              data-aos-anchor-placement="top-center">
                 <img src="Images/Ayo1.png" alt="Ayodele">
             </div>
     </div>
@@ -250,24 +256,32 @@
         <h4 class="title">PREVIOUS PROJECTS</h4>
     </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" data-aos-duration="600"
+                            data-aos-easing="ease-in"
+                            data-aos-mirror="true"
+                            data-aos-once="false"
+                            data-aos="slide-right">
         <div class="card prjcard1">
             <img  id="eduimg" class="card-img-top" alt="Eduford">
             <div class="card-body text-center">
                 <h1 class="kreep">
-                    <a class="visitbtn" href=""><b>Visit Site</b></a>
+                    <a class="visitbtn" href="Edu/index.html" target="_blank"><b>Visit Site</b></a>
                   </h1>
             </div>
           </div>
     </div>
     
     
-    <div class="col-md-6">
+    <div class="col-md-6" data-aos-duration="600"
+                          data-aos-easing="ease-in"
+                          data-aos-mirror="true"
+                          data-aos-once="false"
+                          data-aos="slide-left">
         <div class="card prjcard2">
             <img  id="funimg" class="card-img-top" alt="Furniture Z">
             <div class="card-body text-center">
                 <h1 class="kreep">
-                    <a class="visitbtn" href=""><b>Visit Site</b></a>
+                    <a class="visitbtn" href="Furniture/index.html" target="_blank"><b>Visit Site</b></a>
                   </h1>
             </div>
           </div>
@@ -411,6 +425,15 @@
 </div>
 
 </section>
+   </div>
+<footer class="footer text-center">
+  <div class="footercontentdiv">
+        <div class="footercontent2">
+        <p>BUILT BY <a href="http://www.ayodele.me">AYODELE</a> &#38 DESIGNED BY
+        <a href="">YAKUB AKOREDE</a></p>
+      </div>
+  </div>
+</footer>
 
 
 
@@ -590,5 +613,10 @@ verifyfield();
 
 
 </script>
+<!-- fade effect script -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
