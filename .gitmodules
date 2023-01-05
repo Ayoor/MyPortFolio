@@ -1,0 +1,6 @@
+[submodule "TeslaClone"]
+	path = TeslaClone
+	url = https://github.com/Ayoor/Tesla.git
+[submodule "TeslaProject"]
+	path = TeslaProject
+	url = https://github.com/Ayoor/Tesla.git
