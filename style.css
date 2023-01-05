@@ -17,6 +17,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 .navbar{
     background-color: white;
@@ -549,6 +550,16 @@ width: 80px;
     content: url(Images/Furniture.gif);
 }
 
+#Tesimg{
+    content: url("Images/Tesla.jpg");
+}
+
+.tesladiv{
+    margin-top: 20px;
+}
+/* #Tesimg:hover{
+    content: url(Images/Furniture.gif);
+} */
 
 .visitbtn {
     background-color: white;
